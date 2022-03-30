@@ -22,8 +22,10 @@
 		},
 
 		async created() {
-			const query = `*[_type == $type]`
-			const params = { type: 'project' };
+			const query = `*[slug.current == $slug][0]`
+			const params = {
+				slug: this.$route.params.projectSlug
+			 };
 
 			this.result = await sanity.fetch(query, params);
 			this.loading = false;
@@ -32,5 +34,5 @@
 </script>
 
 <style>
-	
+
 </style>

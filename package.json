@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@sanity/client": "^3.3.0",
+    "url": "^0.11.0",
     "vue": "^3.2.31",
     "vue-router": "^4.0.14"
   },
