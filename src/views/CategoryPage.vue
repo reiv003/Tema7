@@ -7,9 +7,9 @@
 	import sanityClient from '@sanity/client';
 
 	const sanity = sanityClient({
-		projectId: '32td7jzv',
+		projectId: 'm8b976tf',
 		dataset: 'production',
-		apiVersion: '2022-03-30',
+		apiVersion: '2022-04-20',
 		useCdn: false
 	})
 
@@ -24,16 +24,16 @@
 		async created() {
 			const query = `*[slug.current == $slug][0]`
 			const params = {
-				slug: this.$route.params.projectSlug
-			 };
+				slug: this.$route.params.categorySlug
+			};
 
 			this.result = await sanity.fetch(query, params);
 			this.loading = false;
 
-			/* head tags */
-			// document.title = this.result.title;
+			document.title = this.result.name;
 		}
-	};
+	}
+
 </script>
 
 <style>

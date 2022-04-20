@@ -17,6 +17,41 @@ export default {
 			}
 		},
 		{
+			title: 'Description',
+			name: 'description',
+			type: 'text'
+		},
+		{
+			title: 'Display Image',
+			name: 'displayImage',
+			type: 'image',
+			options: {
+				hotspot: true
+			}
+		},
+		{
+			title: 'Extra Images',
+			name: 'extraImages',
+			type: 'array',
+			of: [{ type: 'image' }]
+		},
+		{
+			title: 'Price',
+			name: 'price',
+			type: 'number'
+		},
+		{
+			title: 'Category',
+			name: 'category',
+			type: 'reference',
+			to: { type: 'category' }
+		},
+		{
+			title: 'Stock',
+			name: 'stock',
+			type: 'number'
+		},
+		{
 			title: 'Specification',
 			name: 'specification',
 			type: 'object',
@@ -45,40 +80,6 @@ export default {
 				},
 			]
 		},
-		{
-			title: 'Display Image',
-			name: 'displayImage',
-			type: 'image',
-			options: {
-				hotspot: true
-			}
-		},
-		{
-			title: 'Extra Images',
-			name: 'extraImages',
-			type: 'array',
-			of: [{ type: 'image' }]
-		},
-		{
-			title: 'Description',
-			name: 'description',
-			type: 'text'
-		},
-		{
-			title: 'Price',
-			name: 'price',
-			type: 'number'
-		},
-		{
-			title: 'Category',
-			name: 'category',
-			type: 'reference',
-			to: { type: 'category' }
-		},
-		{
-			title: 'Stock',
-			name: 'stock',
-			type: 'number'
-		}
+
 	]
 }
