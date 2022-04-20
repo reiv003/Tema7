@@ -27,6 +27,9 @@
 
 			this.result = await sanity.fetch(query, params);
 			this.loading = false;
+
+			/* head tags */
+			document.title = 'Front page';
 		}
 	};
 </script>

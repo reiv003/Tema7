@@ -29,6 +29,9 @@
 
 			this.result = await sanity.fetch(query, params);
 			this.loading = false;
+
+			/* head tags */
+			document.title = this.result.title;
 		}
 	};
 </script>

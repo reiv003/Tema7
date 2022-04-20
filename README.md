@@ -1,3 +1,3 @@
-# Sanity-Vue integrasjon
+# Tema 7
 
-Eksempel
+Implementere en nettbutikk med data hentet fra CMS (Sanity).
