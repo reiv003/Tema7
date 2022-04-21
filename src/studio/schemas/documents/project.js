@@ -9,6 +9,14 @@ export default {
             type: 'string'
         },
         {
+            title: 'Slug',
+            name: 'slug',
+            type: 'slug',
+            options: {
+                source: 'title'
+            }
+        },
+        {
             title: 'Description',
             name: 'description',
             type: 'text'
@@ -17,6 +25,12 @@ export default {
             title: 'Year',
             name: 'year',
             type: 'number'
+        },
+        {
+            title: 'Documentation',
+            name: 'documentation',
+            type: 'array',
+            of: [{ type: 'imageCaption' }]
         },
         {
             title: 'Client',
@@ -32,6 +46,11 @@ export default {
                 type: 'reference',
                 to: [{ type: 'collaborator' }]
             }]
+        },
+        {
+            title: 'Preview',
+            name: 'preview',
+            type: 'imageCaption'
         }
     ]
 

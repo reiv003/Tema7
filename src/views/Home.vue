@@ -4,40 +4,28 @@
 </template>
 
 <script>
-	// import sanityClient from '@sanity/client';
-	// import sanity from '../sanity.js';
 	import query from '../groq/home.groq?raw';
-	import sanityMixin from '../mixins/sanityMixin.js';
-	import metaMixin from '../mixins/metaMixin.js';
-
-	// const sanity = sanityClient({
-	// 	projectId: 'm8b976tf',
-	// 	dataset: 'production',
-	// 	apiVersion: '2022-03-30',
-	// 	useCdn: false
-	// })
+	import viewMixin from '../mixins/viewMixin.js';
 
 	export default {
-		mixins: [sanityMixin, metaMixin],
-		// data() {
-		// 	return {
-		// 		loading: true,
-		// 		result: null
-		// 	}
-		// },
+		mixins: [viewMixin],
+
 
 		async created() {
-			await this.sanityFetch(query, { documentType: 'project' })
+			await this.sanityFetch(query, {
+				documentType: 'product'
+			});
+
+			this.metaTags({
+				title: 'HEI HOME.VUE'
+			})
 		// 	// const query = `*[_type == $type]`
 		// 	const params = { type: 'product' };
 
 			// this.result = await sanity.fetch(query, params);
 			// this.loading = false;
-
-			/* head tags */
-			// document.title = 'Front page';
 		}
-	};
+	}
 </script>
 
 <style>

@@ -24,34 +24,15 @@
 </template>
 
 <script>
-	// import sanity from '../sanity.js';
 	import query from '../groq/projectpage.groq?raw';
-	import sanityMixin from '../mixins/sanityMixin.js';
-	import metaMixin from '../mixins/metaMixin.js';
-
-	// import sanityClient from '@sanity/client';
-
-	// const sanity = sanityClient({
-	// 	projectId: 'm8b976tf',
-	// 	dataset: 'production',
-	// 	apiVersion: '2022-04-20',
-	// 	useCdn: false
-	// })
+	import viewMixin from '../mixins/viewMixin.js';
 
 	export default {
-		mixins: [sanityMixin, metaMixin],
+		mixins: [viewMixin],
+	
 
 		async created() {
 			await this.sanityFetch(query, { slug: this.$route.params.productSlug })
-			// const query = `*[slug.current == $slug][0]`
-			// const params = {
-			// 	slug: this.$route.params.productSlug
-			// };
-
-			// this.result = await sanity.fetch(query, params);
-			// this.loading = false;
-
-			// document.title = this.result.name;
 		}
 	}
 
