@@ -4,31 +4,28 @@
 </template>
 
 <script>
-	import sanityClient from '@sanity/client';
-
-	const sanity = sanityClient({
-		projectId: '32td7jzv',
-		dataset: 'production',
-		apiVersion: '2022-03-30',
-		useCdn: false
-	})
+	import query from '../groq/home.groq?raw';
+	import viewMixin from '../mixins/viewMixin.js';
 
 	export default {
-		data() {
-			return {
-				loading: true,
-				result: null
-			}
-		},
+		mixins: [viewMixin],
+
 
 		async created() {
-			const query = `*[_type == $type]`
-			const params = { type: 'project' };
+			await this.sanityFetch(query, {
+				documentType: 'product'
+			});
 
-			this.result = await sanity.fetch(query, params);
-			this.loading = false;
+			this.metaTags({
+				title: 'HEI HOME.VUE'
+			})
+		// 	// const query = `*[_type == $type]`
+		// 	const params = { type: 'product' };
+
+			// this.result = await sanity.fetch(query, params);
+			// this.loading = false;
 		}
-	};
+	}
 </script>
 
 <style>
