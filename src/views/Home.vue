@@ -1,6 +1,10 @@
 <template>
-	<div v-if="loading">...</div>
-	<pre v-else> {{ JSON.stringify(result, null, 3) }} </pre>
+	<div v-if="result"> 
+		<div> {{ result.name }} </div>
+	
+		<div></div>
+
+	</div>
 </template>
 
 <script>
@@ -13,7 +17,7 @@
 
 		async created() {
 			await this.sanityFetch(query, {
-				documentType: 'product'
+				documentType: 'user'
 			});
 
 			this.metaTags({

@@ -1,6 +1,6 @@
 <template>
-	<div v-if="loading">...</div>
-	<pre v-else> {{ JSON.stringify(result, null, 3) }} </pre>
+	<!-- <div v-if="loading">...</div> -->
+	<!-- <pre v-else> {{ JSON.stringify(result, null, 3) }} </pre> -->
 
 	<!-- 
 		https://forum.vuejs.org/t/typeerror-cannot-read-property-title-of-null/23803/9
@@ -13,6 +13,7 @@
 		<div> {{ result.description }} </div>
 		<!-- <div><img src="`${result.displayImage}`"/></div> -->
 		<!-- <div> {{ result.extraImages }} </div> -->
+		<div> <img :src="`${result.displayImage.asset._ref}`"/></div>
 		<div>{{ result.price }}</div>
 		<div> {{ result.stock }} </div>
 		<div> {{ result.specification }} </div>
