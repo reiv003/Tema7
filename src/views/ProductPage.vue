@@ -7,9 +7,9 @@
 
 		Må bruke v-if her for å unngå feilmelding "cannot read properties of null". Får feil og warnings, men verdiene vises likevel. Sannsynligvis fordi verdiene er ikke initialisert for seg selv, men fylles kun inn med data når result er lastet inn. Men å definere verdiene som null først under return eller under script gjorde ikke noen forskjell. 
 	-->
-
+<div class="router-container">
 	<div v-if="result"> 
-		<div> {{ result.name }} </div>
+		<h1> {{ result.name }} </h1>
 		<div> {{ result.description }} </div>
 		<!-- <div><img src="`${result.displayImage}`"/></div> -->
 		<!-- <div> {{ result.extraImages }} </div> -->
@@ -22,6 +22,7 @@
 
 	</div>
 	<!-- <div> {{ JSON.stringify(result.description, null, 3) }} </div> -->
+</div>
 </template>
 
 <script>

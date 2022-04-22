@@ -1,3 +1,36 @@
 body {
 	background-color: aliceblue;
+	font-family: 'ArchivoNarrow', 'serif';
+	font-size: 18px;
+}
+
+h1 {
+	font-family: 'DidactGothic', 'sans-serif';
+	font-size: 3em;
+}
+
+@media (min-width: 1280px) {
+	body {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		column-gap: 0.5em;
+	}
+
+	header {
+		grid-column: 2 / span 10;
+	}
+
+	h1 {
+		grid-column: 4 /span 10;
+	}
+
+	.router-container {
+		grid-column: 4 / span 10;
+	}
+
+	.sidebar {
+		grid-column: 2 /span 4;
+	}
+
+
 }

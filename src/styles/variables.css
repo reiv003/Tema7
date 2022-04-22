@@ -1,3 +1,9 @@
 :root {
 	--sample-variable: 0.5em;
+	--background-color: #FBFBFA;
+	--body-text-color: #101210;
+	--highlight-color: #25523F;
+	--border-color: #B6CDC9;
+	--divider-color: #DCECBB;
+	--image-border: 5px dashed var(--border-color);
 }
