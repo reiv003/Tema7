@@ -13,7 +13,7 @@
 		<div> {{ result.description }} </div>
 		<!-- <div><img src="`${result.displayImage}`"/></div> -->
 		<!-- <div> {{ result.extraImages }} </div> -->
-		<div> <img :src="`${result.displayImage.asset._ref}`"/></div>
+		<div> <img :src="`${result.displayImage.asset.url}`"/></div>
 		<div>{{ result.price }}</div>
 		<div> {{ result.stock }} </div>
 		<div> {{ result.specification }} </div>
