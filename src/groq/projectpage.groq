@@ -3,5 +3,9 @@
 
 	extraImages[] {
 		..., asset->{ url }
+	},
+
+	displayImage {
+		..., asset->{ url }
 	}
 }
