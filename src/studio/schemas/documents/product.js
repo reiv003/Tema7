@@ -56,14 +56,18 @@ export default {
 			name: 'specification',
 			type: 'object',
 			fields: [
+				{ title: 'DN', name: 'dn', type: 'string' },
+				{ title: 'PN', name: 'pn', type: 'string' },
 				{ title: 'Length', name: 'length', type: 'string' },
-				{ title: 'Casing', name: 'casing', type: 'string' },
+				{ title: 'Casing', name: 'casing', type: 'string' }, //material
 				{ title: 'Spindle', name: 'spindle', type: 'string' },
-				{ title: 'Density', name: 'density', type: 'string' },
-				{ title: 'Weight', name: 'weight', type: 'string' },
-				{ title: 'Production Year', name: 'productionYear', type: 'number' },
+				{ title: 'Density', name: 'density', type: 'string' }, //measured in bar
+				{ title: 'Temperature range', name: 'temperature', type: 'string' },
+				{ title: 'Usage areas', name: 'usage', type: 'string' },
+				{ title: 'Weight', name: 'weight', type: 'string' }, // fake data
+				{ title: 'Production Year', name: 'productionYear', type: 'number' }, //fake data
 				{
-					title: 'Warranty',
+					title: 'Warranty', //fake data
 					name: 'warranty',
 					type: 'array',
 					of: [{ type: 'string' }],

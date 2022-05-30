@@ -1,8 +1,20 @@
-/*
 @font-face {
-	font-family: Arial;
-	src: url('/assets/fonts/Arial.ttf');
+	font-family: DidactGothic;
+	src: url('/assets/fonts/DidactGothic-Regular.ttf');
 	font-weight: normal;
 	font-style: normal;
 }
-*/
+
+@font-face {
+	font-family: ArchivoNarrow;
+	src: url('/assets/fonts/ArchivoNarrow-VariableFont_wght.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: ArchivoNarrowSemiBold;
+	src: url('/assets/fonts/ArchivoNarrow-VariableFont_wght.ttf');
+	font-weight: SemiBold;
+	font-style: normal;
+}
