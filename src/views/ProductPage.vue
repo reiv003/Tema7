@@ -7,8 +7,9 @@
 
 		Må bruke v-if her for å unngå feilmelding "cannot read properties of null". Får feil og warnings, men verdiene vises likevel. Sannsynligvis fordi verdiene er ikke initialisert for seg selv, men fylles kun inn med data når result er lastet inn. Men å definere verdiene som null først under return eller under script gjorde ikke noen forskjell. 
 	-->
-<div class="router-container">
+<div class="router__container">
 	<div v-if="result"> 
+
 		<h1> {{ result.name }} </h1>
 		<div> {{ result.description }} </div>
 		<!-- <div><img src="`${result.displayImage}`"/></div> -->
@@ -29,7 +30,14 @@
 	import query from '../groq/projectpage.groq?raw';
 	import viewMixin from '../mixins/viewMixin.js';
 
+	import Sidebar from '../components/Sidebar.vue';
+
 	export default {
+		/* Removed sidebar since I couldn't get the placement correct in the grid, and it was pushing the product content too far down. */
+		components: {
+			Sidebar
+		},
+
 		mixins: [viewMixin],
 	
 
@@ -41,5 +49,9 @@
 </script>
 
 <style>
+
+.router__container img {
+	max-height: 40em;
+}
 
 </style>
