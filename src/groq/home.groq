@@ -1,1 +1,5 @@
-*[_type == $documentType]
+*[_type == $documentType] {
+  name, slug, displayImage {
+		..., asset->{ url }
+	}
+}
