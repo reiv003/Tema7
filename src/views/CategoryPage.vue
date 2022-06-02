@@ -1,4 +1,5 @@
 <template>
+<!-- This is unused/old code, I had trouble figuring out how to set up routing for categories and the schemas/slugs in Sanity. -->
 	<div v-if="loading">...</div>
 	<pre v-else> {{ JSON.stringify(result, null, 3) }} </pre>
 </template>
