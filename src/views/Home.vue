@@ -5,7 +5,6 @@
 			<h1>Velkommen til oss!</h1>
 			<div class="home__banner-image"><img src="/assets/images/chuttersnap-_EFvjSgbw1c-unsplash.jpg"/></div>
 			<div class="home__blurb">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est quaerat fugiat quidem dicta voluptatibus nisi mollitia nam? Obcaecati magni molestiae corporis similique itaque maxime vero, fuga dolorum, tenetur unde facilis?</div>
-			<!-- <div> {{result.image}} </div> -->
 			<div>
 				<ul class="home__product-list">
 					<li v-for="product in result">
@@ -34,15 +33,6 @@
 			await this.sanityFetch(query, {
 				documentType: 'product'
 			});
-
-			// this.metaTags({
-			// 	title: 'HEI HOME.VUE'
-			// })
-		// 	// const query = `*[_type == $type]`
-		// 	const params = { type: 'product' };
-
-			// this.result = await sanity.fetch(query, params);
-			// this.loading = false;
 		}
 	}
 </script>
@@ -59,7 +49,7 @@
 
 .home__product-list li img {
 	max-height: 10em;
-	border: 2px dashed var(--border-color);
+	border: var(--image-border);
 }
 
 .home__banner-image {

@@ -6,12 +6,10 @@ import order from './documents/order.js'
 import product from './documents/product.js'
 import user from './documents/user.js'
 
-import imageCaption from './types/imageCaption.js'
-
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
-    product, order, category, user, imageCaption
+    product, order, category, user,
   ])
 })
 
